@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -9,9 +11,7 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(163, 154, 161);
+  background-image: radial-gradient(white, black);
 }
 
 .App {
@@ -19,5 +19,4 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }

@@ -1,8 +1,8 @@
 import styled from './Button.module.css'
 
-const Button = ({ onClick }) => {
+const Button = ({ onClick, value }) => {
     return (
-        <button onClick={onClick} className={styled.button}>Reset</button>
+        <button onClick={onClick} className={styled.button}>{value}</button>
     )
 }
 

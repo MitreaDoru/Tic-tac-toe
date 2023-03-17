@@ -23,8 +23,16 @@ const Table = () => {
         setTurn(0)
         setPlayer('X')
     }
+    const handleChangePlayer = () => {
+        if (player === 'X') {
+            setPlayer('O')
+            setTurn(1)
+        } else {
+            setPlayer('X')
+            setTurn(0)
+        }
+    }
     const winner = checkPlayer.checkWinner(table)
-
     const board = table.map((_, indx) => {
 
         if (indx === 0 || indx === 3 || indx === 6) {
@@ -37,10 +45,11 @@ const Table = () => {
         return undefined
     })
     return (
-        <div >
+        <div className={styled.max}>
             <div className={styled.current}>
                 {winner ? <h2>Winner: {winner}</h2> : <h2>Next turn: {player}</h2>}
-                <Button onClick={handleReset} />
+                <Button onClick={handleReset} value='Reset' />
+                <Button onClick={handleChangePlayer} value='Change' />
             </div>
             <div className={styled.board}>
                 {board}
